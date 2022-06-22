@@ -1,27 +1,29 @@
 <div id="<%= dom_id cour %>">
-  <p>
+<br>
+  <h1 class="d-flex justify-content-center">
     <strong>Titre:</strong>
     <%= cour.titre %>
-  </p>
+  </h1>
 
-  <p>
-    <strong>Content:</strong>
-    <%= cour.content %>
-  </p>
+  <h2 class="m-5">
+    <strong>Description:</strong>
+  </h2>
+    <h3><%= cour.content %></h3>
 
-  <p>
+<!--  <p>
     <strong>Video:</strong>
-    <%= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
+    <%#= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
   </p>
 
   <p>
     <strong>Thumbnail:</strong>
-    <%= image_tag url_for(cour.thumbnail.representation(resize_to_limit: [500, 500])) if cour.thumbnail.representable?%>
+    <%#= image_tag url_for(cour.thumbnail.representation(resize_to_limit: [500, 500])) if cour.thumbnail.representable?%>
+    <%#= image_tag url_for(cour.thumbnail)%>
   </p>
-
+<%#= binding.break %>
   <p>
     <strong>Video:</strong>
-    <%= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
+    <%#= video_tag url_for(cour.video), controls: true if cour.video.attached?%>
   </p>
-
+-->
 </div>

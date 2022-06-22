@@ -4,28 +4,24 @@
 
 <div id="cours">
   <% @cours.each do |cour| %>
-    <%= render cour %>
+    <%#= render cour %>
     <p>
-      <%= link_to "Show this cour", cour %>
+      <%#= link_to "Show this cour", cour %>
     </p>
-  <% end %>
-</div>
-
-<%= link_to "New cour", new_cour_path %>
-
-
 <div class="card text-center col-md-11">
   <div class="card-header">
     TITLE
   </div>
   <div class="card-body row">
     <div class="col-md-5 " style="">
-      <%= video_tag url_for(@cours.first.video) %>
+      <%= image_tag url_for(cour.thumbnail), width:300 %>
+      <%#= video_tag url_for(@cours.first.video) if @cours%>
       <%#= image_tag url_for(@cours.first.thumbnail.representation(resize_to_limit: [900, 200])) %>
     </div>
     <div class="col-md-4">
       <h5 class="card-title">Special title treatment</h5>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <%= link_to "Show this cour", cour, class:"btn btn-primary" %>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
@@ -33,3 +29,52 @@
     2 days ago
   </div>
 </div>
+
+*******
+<div class="card text-center col-md-11">
+  <div class="card-header">
+    TITLE
+  </div>
+  <div class="card-body row">
+    <div class="col-md-5 " style="">
+      <%= image_tag url_for(cour.thumbnail), width:300 %>
+      <%#= video_tag url_for(@cours.first.video) if @cours%>
+      <%#= image_tag url_for(@cours.first.thumbnail.representation(resize_to_limit: [900, 200])) %>
+    </div>
+    <div class="col-md-4">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <%= link_to "Show this cour", cour, class:"btn btn-primary" %>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+<div class="card text-center col-md-11">
+  <div class="card-header">
+    TITLE
+  </div>
+  <div class="card-body row">
+    <div class="col-md-5 " style="">
+      <%= image_tag url_for(cour.thumbnail), width:300 %>
+      <%#= video_tag url_for(@cours.first.video) if @cours%>
+      <%#= image_tag url_for(@cours.first.thumbnail.representation(resize_to_limit: [900, 200])) %>
+    </div>
+    <div class="col-md-4">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <%= link_to "Show this cour", cour, class:"btn btn-primary" %>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+  <% end %>
+</div>
+
+<%= link_to "New cour", new_cour_path %>
+
